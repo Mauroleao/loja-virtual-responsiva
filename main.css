@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: end;
+}
+
+header,
+footer {
+    background-color: #f07a0b;
+    padding-top: 16px;
+    color: #fff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header>.container,
+footer>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 16px;
+}
+
+div .container {
+    background-color: #f07a0b;
+    padding: 16px 0;
+    display: flex;
+    justify-content: flex-end;
+    /* Alinha os itens do menu à direita */
+}
+
+.container ul {
+    display: flex;
+    list-style: none;
+    /* Remove as marcas de lista */
+}
+
+.containerli {
+    margin-left: 16px;
+    /* Espaço entre os itens do menu */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    /* Garante que o link ocupe o espaço total do item */
+    padding: 8px 16px;
+    /* Adiciona um pouco de espaçamento ao redor do link */
+}
+
+.container-flex {
+    display: flex;
+}
+
+#sobre-a-loja img {
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+.lista-veiculos {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Garante que os itens não quebrem para a linha seguinte */
+    overflow-x: auto;
+    /* Adiciona uma barra de rolagem horizontal, se necessário */
+}
+
+.lista-veiculos li {
+    list-style: none;
+    flex: 0 0 calc(25% - 16px);
+    /* Ajusta a largura dos itens para considerar a margem */
+    margin: 0 8px 24px;
+    /* Adiciona espaço horizontal entre os itens e espaço vertical na parte inferior */
+    box-sizing: border-box;
+    /* Garante que a margem e o padding sejam incluídos na largura total */
+}
+
+.lista-veiculos li img {
+    max-width: 100%;
+}
+
+.item-central {
+    margin: 0;
+    /* Remove a margem lateral */
+}
+
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #dd370e;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.price {
+    margin: 16px 0;
+    display: block;
+}
+
+.price del {
+    color: #ccc;
+}
+
+
+footer {
+    background-color: #f07a0b;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Alinha verticalmente o conteúdo no centro */
+    flex-wrap: wrap;
+    /* Permite que o conteúdo quebre em várias linhas se necessário */
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Alinha verticalmente o conteúdo no centro */
+    width: 100%;
+    /* Garante que o container ocupe toda a largura disponível */
+    max-width: 1024px;
+    /* Limita a largura máxima do container */
+    margin: 0 auto;
+    /* Centraliza o container */
+}
+
+footer p {
+    margin: 0;
+    /* Remove a margem padrão do parágrafo */
+    font-size: 14px;
+    /* Ajusta o tamanho da fonte, se necessário */
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente os ícones das redes sociais */
+}
+
+footer li {
+    list-style: none;
+    margin-left: 16px;
+    /* Espaço entre os ícones das redes sociais */
+}
+
+footer li img {
+    height: 24px;
+    /* Ajusta o tamanho dos ícones das redes sociais */
+}
+
+/* Layout Desktop e Tablet */
+.container.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-container h1 {
+    margin: 0;
+    /* Remove a margem padrão do título */
+}
+
+.header-container .menu {
+    display: flex;
+}
+
+.header-container .menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-container .menu li {
+    margin-left: 16px;
+    /* Espaço entre os itens do menu */
+}
+
+.header-container .menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.linha-azul {
+    width: 100%;
+    height: 4px;
+    /* Altura da linha azul */
+    background-color: #ff7300;
+    /* Cor da linha azul */
+    margin-top: 16px;
+    /* Espaço acima da linha azul */
+}
+
+
+/* Layout Mobile */
+@media (max-width: 640px) {
+    .container {
+        max-width: 100%;
+        /* Garante que o container ocupe toda a largura disponível em dispositivos móveis */
+    }
+
+    .container-flex {
+        flex-direction: column;
+        /* Alinha os itens em uma coluna única */
+    }
+
+    /* Corrige a centralização da imagem e do texto em 'Sobre a Loja' */
+    #sobre-a-loja {
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    #sobre-a-loja img {
+        max-width: 100%;
+        margin: 0 auto;
+        /* Centraliza a imagem e garante que ela não ultrapasse a largura da tela */
+        display: block;
+    }
+
+    .container ul {
+        flex-direction: column;
+        /* Alinha os itens da lista em uma coluna única */
+        align-items: center;
+        /* Centraliza os itens da lista */
+    }
+
+    .container li {
+        margin-left: 0;
+        /* Remove a margem lateral para dispositivos móveis */
+        margin-bottom: 16px;
+        /* Adiciona espaço inferior entre os itens */
+    }
+
+    header {
+        padding: 8px 16px;
+        /* Ajusta o padding do cabeçalho */
+    }
+
+    header h1 {
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte do título */
+        text-align: center;
+        /* Centraliza o título do cabeçalho */
+        margin-bottom: 16px;
+    }
+
+    .lista-veiculos li {
+        flex: 0 0 100%;
+        /* Faz com que cada item ocupe 100% da largura disponível */
+        margin: 0 0 16px;
+        /* Adiciona espaço inferior entre os itens */
+    }
+
+    .price {
+        font-size: 14px;
+        /* Ajusta o tamanho da fonte do preço */
+    }
+
+    footer ul {
+        flex-direction: column;
+        /* Alinha os itens da lista de redes sociais em uma coluna única */
+        align-items: center;
+    }
+
+    footer li {
+        margin-left: 0;
+        /* Remove a margem lateral para os ícones das redes sociais */
+        margin-bottom: 8px;
+        /* Adiciona espaço inferior entre os ícones */
+    }
+
+    footer li img {
+        height: 20px;
+        /* Ajusta o tamanho dos ícones das redes sociais */
+    }
+
+    button {
+        font-size: 14px;
+        /* Ajusta o tamanho da fonte do botão */
+    }
+}
