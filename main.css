@@ -319,3 +319,18 @@ footer li img {
         /* Ajusta o tamanho da fonte do botão */
     }
 }
+
+/* Layout para iPad Mini */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .lista-veiculos {
+        flex-wrap: wrap;
+        /* Permite que os itens se quebrem para a linha seguinte */
+    }
+
+    .lista-veiculos li {
+        flex: 0 0 calc(50% - 16px);
+        /* Ajusta a largura dos itens para duas colunas */
+        margin: 0 8px 16px;
+        /* Ajusta a margem para os itens da lista */
+    }
+}
